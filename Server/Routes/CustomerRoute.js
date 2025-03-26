@@ -11,7 +11,6 @@ route.post("/CustomerRegistred", CustomerController.Registrationdata );
 
 
 
-
 module.exports = route;
 
 

@@ -11,7 +11,7 @@ const CustomerModel = require("../Model/CustomerModel");
 
 const Registrationdata = async(req,res) =>{
    const {  name ,email,address,city,number,sdate,edate,password,Subject,price,board,distination} = req.body;
-   const Customer = await AdminController.create({
+   const Customer = await CustomerModel.create({
      name:name,
     email:email,
     address:address,
