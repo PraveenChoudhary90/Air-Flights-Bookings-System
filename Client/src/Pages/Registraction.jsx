@@ -38,7 +38,7 @@ const Registraction = ()=>{
 
    const handelSubmit = async(e)=>{
     e.preventDefault();
-    const api = `${BASE_URL}/Customer/CustomerRegistred`;
+    const api = `${BASE_URL}/Admin/AdminRegistred`;
     try {
         const response = await axios.post(api, input)
         console.log(response.data)
@@ -88,21 +88,20 @@ const Registraction = ()=>{
         <Form.Control type="text" name='number'  onChange={handelInput}  />
       </Form.Group>
 
-<Form.Group className="mb-3" controlId="formBasicEmaile">
+{/* <Form.Group className="mb-3" controlId="formBasicEmaile">
         <Form.Label>select Subject</Form.Label>
         <Form.Select aria-label="Default select example"  name='Subject'  onChange={handelInput}  >
           <option>Open this select menu Bussiness And Economy class</option>
           <option value="Bussiness Class">Bussiness Class</option>
           <option value="Economy Class">Economy Class</option>
-
     </Form.Select>
-      </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Start Date</Form.Label>
-        <Form.Control type="date" name='sdate'  onChange={handelInput} />
+      </Form.Group> */}
+             <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Label>Air Port</Form.Label>
+        <Form.Control type="text" name='airport'  onChange={handelInput} />
       </Form.Group>
 
-       <Form.Group className="mb-3" controlId="formBasicEmailj">
+       {/*<Form.Group className="mb-3" controlId="formBasicEmailj">
         <Form.Label>End Date</Form.Label>
         <Form.Control type="date" name='edate'  onChange={handelInput}  />
       </Form.Group>
@@ -110,7 +109,7 @@ const Registraction = ()=>{
        <Form.Group className="mb-3" controlId="formBasicPasswordj">
         <Form.Label>Price</Form.Label>
         <Form.Control type="text" name='price'  onChange={handelInput} />
-      </Form.Group>
+      </Form.Group> */}
 
       <Form.Group className="mb-3" controlId="formBasicPasswordj">
         <Form.Label>Password</Form.Label>

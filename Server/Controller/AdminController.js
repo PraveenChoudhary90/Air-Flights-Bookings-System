@@ -1,5 +1,4 @@
-const AdminController = require("../Model/AdminModel");
-
+const AdminModel = require("../Model/AdminModel");
 const CustomerModel = require("../Model/CustomerModel");
 
 
@@ -8,26 +7,22 @@ const CustomerModel = require("../Model/CustomerModel");
 
 
 const Registrationdata = async(req,res) =>{
-   const {  name ,email,address,city,number,sdate,edate,password,Subject,price} = req.body;
-   const Customer = await AdminController.create({
+   const {  name ,email,address,city,number,password} = req.body;
+   const Customer = await AdminModel.create({
      name:name,
     email:email,
     address:address,
     city:city,
     number:number,
-    Subject:Subject,
-    sdate:sdate,
-    edate:edate,
-    price:price,
     password:password
    })
-   res.status(200).send({msg:"Your Flight Is Book Successfully"});
+   res.status(200).send({msg:"You Book Successfully"});
 
 } 
 
 const LoginData = async (req,res)=>{
    const{ email, password} = req.body;
-   const logindata  = await AdminController.findOne({
+   const logindata  = await AdminModel.findOne({
     email:email,
    })
    res.status(200).send(logindata);
@@ -35,7 +30,7 @@ const LoginData = async (req,res)=>{
 
 
 const Displydata = async(req,res)=>{
-    const Customerdata = await AdminController.find();
+    const Customerdata = await CustomerModel.find();
     res.status(200).send(Customerdata);
 }
 

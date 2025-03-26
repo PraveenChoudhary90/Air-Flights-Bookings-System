@@ -9,7 +9,7 @@ const MyBookings=()=>{
     const navigate = useNavigate();
 
     const loadData=async()=>{
-        const api = `${BASE_URL}/Customer/CustomerList/?docid=${localStorage.getItem("docid")}`;
+        const api = `${BASE_URL}/Admin/CustomerList/?docid=${localStorage.getItem("docid")}`;
         const response = await axios.get(api);
         console.log(response.data);
         setMydata(response.data);

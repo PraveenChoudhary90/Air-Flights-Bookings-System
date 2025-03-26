@@ -21,7 +21,7 @@ function Booking() {
           <Button
             variant="primary"
             onClick={() => {
-              navigate("/registraction");
+              navigate("/customerRegistraction");
             }}
           >
             Book Your Flight
@@ -43,7 +43,7 @@ function Booking() {
           <Button
             variant="primary"
             onClick={() => {
-              navigate("/registraction");
+              navigate("/customerRegistraction");
             }}
           >
             Book Your Flight
@@ -65,7 +65,7 @@ function Booking() {
           <Button
             variant="primary"
             onClick={() => {
-              navigate("/registraction");
+              navigate("/customerRegistraction");
             }}
           >
             Book Your Flight
@@ -87,7 +87,7 @@ function Booking() {
           <Button
             variant="primary"
             onClick={() => {
-              navigate("/registraction");
+              navigate("/customerRegistraction");
             }}
           >
             Book Your Flight

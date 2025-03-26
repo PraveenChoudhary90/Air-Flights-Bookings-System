@@ -5,10 +5,6 @@ const AdminSchema = new mongoose.Schema({
     address:String,
     city:String,
     number:String,
-    Subject:String,
-    price:String,
-    sdate:String,
-    edate:String,
     password:String
 
 })

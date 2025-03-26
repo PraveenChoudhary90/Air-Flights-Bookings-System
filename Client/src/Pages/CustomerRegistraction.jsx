@@ -53,7 +53,7 @@ const CustomerRegistraction = ()=>{
     return(
         <>
          <Button variant="primary" style={{marginLeft:"400px"}} onClick={handleShow}>
-       Registered here 
+       Customer Registered here 
       </Button>
 
       <Modal show={show} onHide={handleClose}>
@@ -86,6 +86,16 @@ const CustomerRegistraction = ()=>{
        <Form.Group className="mb-3" controlId="formBasicEmaild">
         <Form.Label>Enter Contact Number</Form.Label>
         <Form.Control type="text" name='number'  onChange={handelInput}  />
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasicEmailck">
+        <Form.Label>Enter Boarding</Form.Label>
+        <Form.Control type="text" name='board'  onChange={handelInput} />
+      </Form.Group>
+
+       <Form.Group className="mb-3" controlId="formBasicEmailld">
+        <Form.Label>Enter Distination </Form.Label>
+        <Form.Control type="text" name='distination'  onChange={handelInput}  />
       </Form.Group>
 
 <Form.Group className="mb-3" controlId="formBasicEmaile">

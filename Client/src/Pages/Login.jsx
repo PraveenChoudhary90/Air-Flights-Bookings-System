@@ -15,7 +15,7 @@ const Login = ()=>{
   console.log(email, password)
      const handelSubmit = async(e)=>{
         e.preventDefault();
-   const api = `${BASE_URL}/Customer/Login`;
+   const api = `${BASE_URL}/Admin/Login`;
      try {
         const response = await axios.post(api, {email:email, password:password })
         console.log(response.data);

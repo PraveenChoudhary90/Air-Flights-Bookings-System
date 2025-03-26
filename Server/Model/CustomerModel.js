@@ -6,6 +6,8 @@ const CustomerSchema = new mongoose.Schema({
     city:String,
     number:String,
     Subject:String,
+    board:String,
+    distination:String,
     price:String,
     sdate:String,
     edate:String,
