@@ -10,6 +10,7 @@ import Booking from './Pages/Booking'
 import DashBoard from './Pages/Dashboard'
 import MyBookings from './Pages/MyBooking'
 import Delete from './Pages/Delete'
+import CustomerRegistraction from './Pages/CustomerRegistraction'
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
     <Route path='login' element={<Login/>}/>
     <Route path='book' element={<Booking/>}/>
     <Route path='registraction' element={<Registraction/>}/>
-    {/* <Route path='mybook/:id' element={<StudentBook/>}/> */}
+    <Route path='customerRegistraction' element={<CustomerRegistraction/>}/>
     </Route>
   </Routes>
   <Routes>
