@@ -35,10 +35,27 @@ const DeleteData = async(req,res)=>{
 }
 
 
+const Frompardetalana = async (req,res)=>{
+        const{id}=req.body
+        const stude= await CustomerModel.findById(id)
+        res.send(stude)
+      }
+
+
+
+
+const Updatedata = async(req,res)=>{
+   const {_id}=req.body;
+  await CustomerModel.findByIdAndUpdate(_id,req.body)
+  res.send("Data Updated")
+
+}
 
 module.exports = {
 
     Registrationdata,
-    DeleteData
+    DeleteData,
+    Frompardetalana,
+    Updatedata
 
 }

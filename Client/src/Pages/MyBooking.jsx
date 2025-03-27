@@ -8,6 +8,11 @@ const MyBookings=()=>{
     const [mydata, setMydata] = useState([]);
     const navigate = useNavigate();
 
+    const handelUpdate =(id)=>{
+      navigate(`/update/${id}`);
+
+    }
+
     const loadData=async()=>{
         const api = `${BASE_URL}/Admin/CustomerList/?docid=${localStorage.getItem("docid")}`;
         const response = await axios.get(api);
@@ -51,6 +56,7 @@ const MyBookings=()=>{
                 <td>{key.edate}</td>
                 <td>{key.price}</td>
                   <td onClick={()=>handelDelete(key._id)} style={{cursor:"pointer"}}>Delete</td>
+                  <td onClick={()=>handelUpdate(key._id)} style={{cursor:"pointer"}}>Update</td>
               </tr>
             
             </>
@@ -77,6 +83,7 @@ const MyBookings=()=>{
           <th>End Date</th>
           <th> Price</th>
           <th>Delete</th>
+          <th>Update</th>
         </tr>
       </thead>
       <tbody>

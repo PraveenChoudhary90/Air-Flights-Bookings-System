@@ -9,8 +9,9 @@ import Registraction from './Pages/Registraction'
 import Booking from './Pages/Booking'
 import DashBoard from './Pages/Dashboard'
 import MyBookings from './Pages/MyBooking'
-import Delete from './Pages/Delete'
+import Delete from './Pages/Update'
 import CustomerRegistraction from './Pages/CustomerRegistraction'
+import Update from './Pages/Update'
 
 
 function App() {
@@ -28,13 +29,15 @@ function App() {
     <Route path='book' element={<Booking/>}/>
     <Route path='registraction' element={<Registraction/>}/>
     <Route path='customerRegistraction' element={<CustomerRegistraction/>}/>
+
     </Route>
   </Routes>
   <Routes>
         <Route path='dashboard' element={<DashBoard/>}>
         <Route path='mybookings' element={<MyBookings/>}/>
-        <Route path="delete/:id" element={<Delete/>}/>
         </Route>
+    <Route path="update/:id" element={<Update/>}/>
+
       </Routes>
   </BrowserRouter>
     </>
