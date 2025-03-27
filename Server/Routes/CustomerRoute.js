@@ -5,7 +5,7 @@ const CustomerController = require("../Controller/CustomerController");
 
 
 route.post("/CustomerRegistred", CustomerController.Registrationdata );
-
+route.post("/Deletedata", CustomerController.DeleteData);
 
 
 

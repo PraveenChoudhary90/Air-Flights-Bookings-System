@@ -23,16 +23,22 @@ const Registrationdata = async(req,res) =>{
     sdate:sdate,
     edate:edate,
     price:price,
-    password:password
    })
    res.status(200).send({msg:"Your Flight Is Book Successfully"});
 
 } 
 
+const DeleteData = async(req,res)=>{
+  const{id}=req.body
+   await CustomerModel.findByIdAndDelete(id);
+  res.send("okk");
+}
+
 
 
 module.exports = {
 
-    Registrationdata
+    Registrationdata,
+    DeleteData
 
 }

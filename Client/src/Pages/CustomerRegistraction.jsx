@@ -121,11 +121,11 @@ const CustomerRegistraction = ()=>{
         <Form.Label>Price</Form.Label>
         <Form.Control type="text" name='price'  onChange={handelInput} />
       </Form.Group>
-
+{/* 
       <Form.Group className="mb-3" controlId="formBasicPasswordj">
         <Form.Label>Password</Form.Label>
         <Form.Control type="password" name='password'  onChange={handelInput} />
-      </Form.Group>
+      </Form.Group> */}
       <Button variant="primary" type="submit" onClick={handelSubmit}>
         Submit
       </Button>

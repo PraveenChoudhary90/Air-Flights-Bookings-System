@@ -20,6 +20,21 @@ const MyBookings=()=>{
     }, []);
 
 
+
+    const handelDelete = async(id)=>{
+      const api = `${BASE_URL}/Customer/Deletedata`;
+      try {
+        const response = await axios.post(api, {id:id});
+          alert("Data is deleted Successfully");
+          loadData();
+      } catch (error) {
+        console.log(error);
+        
+      }
+
+    }
+
+
     const ans= mydata.map((key)=>{
          return(
             <>
@@ -30,12 +45,12 @@ const MyBookings=()=>{
                 <td>{key.city}</td>
                 <td>{key.number}</td>
                 <td>{key.Subject}</td>
+                <td>{key.board}</td>
+                <td>{key.distination}</td>
                 <td>{key.sdate}</td>
                 <td>{key.edate}</td>
                 <td>{key.price}</td>
-                <td>
-                  <button onClick={()=>{navigate(`/delete/${key._id}`)}}>Delete</button>
-                  </td>
+                  <td onClick={()=>handelDelete(key._id)} style={{cursor:"pointer"}}>Delete</td>
               </tr>
             
             </>
@@ -56,6 +71,8 @@ const MyBookings=()=>{
           <th>City</th>
           <th>Number</th>
           <th>Subject</th>
+          <th>Boarding</th>
+          <th>Distination</th>
           <th>Start Date</th>
           <th>End Date</th>
           <th> Price</th>

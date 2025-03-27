@@ -10,8 +10,7 @@ const CustomerSchema = new mongoose.Schema({
     distination:String,
     price:String,
     sdate:String,
-    edate:String,
-    password:String
+    edate:String
 
 })
 

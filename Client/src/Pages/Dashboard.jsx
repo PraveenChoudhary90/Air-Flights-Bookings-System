@@ -29,7 +29,7 @@ const DashBoard=()=>{
              </div>
              <div style={{textAlign:"right", backgroundColor:"aqua", padding:"20px", color:"blue"}}>
                <h3>
-                   Welcome : praveenChoudhary<br></br>          
+                   Welcome : {localStorage.getItem("name")}<br></br>          
                </h3> 
                 <h3>  
                    Email : {localStorage.getItem("email")}<br></br>
