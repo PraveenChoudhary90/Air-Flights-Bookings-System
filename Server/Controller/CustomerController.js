@@ -37,8 +37,8 @@ const DeleteData = async(req,res)=>{
 
 const Frompardetalana = async (req,res)=>{
         const{id}=req.body
-        const stude= await CustomerModel.findById(id)
-        res.send(stude)
+        const Data= await CustomerModel.findById(id)
+        res.send(Data)
       }
 
 
@@ -47,7 +47,7 @@ const Frompardetalana = async (req,res)=>{
 const Updatedata = async(req,res)=>{
    const {_id}=req.body;
   await CustomerModel.findByIdAndUpdate(_id,req.body)
-  res.send("Data Updated")
+  res.send("Data Updated SuccessFully")
 
 }
 

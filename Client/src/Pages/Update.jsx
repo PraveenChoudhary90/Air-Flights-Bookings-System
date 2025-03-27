@@ -1,7 +1,9 @@
 import Form from 'react-bootstrap/Form';
 import { useParams } from "react-router-dom"
 import { useEffect,useState } from "react"
-import axios from "axios"
+import axios from "axios";
+import Button from 'react-bootstrap/Button';
+
 import { useNavigate } from "react-router-dom"
 import BASE_URL from '../config';
 const Update=()=>{
@@ -31,9 +33,10 @@ useEffect(()=>{
     const {id}=useParams()
   return (
     <>
-    <h1>Update Data </h1>
          
-                   <Form>
+                   <Form style={{width:"500px", margin:"auto"}} >
+          <h1>Update Data </h1>
+
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Enter  Name</Form.Label>
             <Form.Control type="text" name='name'  onChange={handelInput} />
