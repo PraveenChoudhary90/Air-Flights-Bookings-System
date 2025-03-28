@@ -1,47 +1,45 @@
-
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import './App.css'
-import Layout from './Layout'
-import Home from './Pages/Home'
-import About from './Pages/About'
-import Login from './Pages/Login'
-import Registraction from './Pages/Registraction'
-import Booking from './Pages/Booking'
-import DashBoard from './Pages/Dashboard'
-import MyBookings from './Pages/MyBooking'
-import Delete from './Pages/Update'
-import CustomerRegistraction from './Pages/CustomerRegistraction'
-import Update from './Pages/Update'
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Layout from "./Layout";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Login from "./Pages/Login";
+import Registraction from "./Pages/Registraction";
+import Booking from "./Pages/Booking";
+import DashBoard from "./Pages/Dashboard";
+import MyBookings from "./Pages/MyBooking";
+import Delete from "./Pages/Update";
+import CustomerRegistraction from "./Pages/CustomerRegistraction";
+import Update from "./Pages/Update";
 
 function App() {
-  
-
   return (
     <>
-  <BrowserRouter>
-  <Routes>
-    <Route path='/' element={<Layout/>} >
-    <Route index element={<Home/>}/>
-    <Route path='home' element={<Home/>}/>
-    <Route path='about' element={<About/>}/>
-    <Route path='login' element={<Login/>}/>
-    <Route path='book' element={<Booking/>}/>
-    <Route path='registraction' element={<Registraction/>}/>
-    <Route path='customerRegistraction' element={<CustomerRegistraction/>}/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="home" element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="login" element={<Login />} />
+            <Route path="book" element={<Booking />} />
+            <Route path="registraction" element={<Registraction />} />
+            <Route
+              path="customerRegistraction"
+              element={<CustomerRegistraction />}
+            />
+          </Route>
+        </Routes>
+        <Routes>
+          <Route path="dashboard" element={<DashBoard />}>
+            <Route path="mybookings" element={<MyBookings />} />
+          </Route>
+            <Route path="/update/:id" element={<Update />} />
 
-    </Route>
-  </Routes>
-  <Routes>
-        <Route path='dashboard' element={<DashBoard/>}>
-        <Route path='mybookings' element={<MyBookings/>}/>
-        </Route>
-    <Route path="update/:id" element={<Update/>}/>
-
-      </Routes>
-  </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
