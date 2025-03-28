@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require("mongoose")
 const bodyParser = require("body-parser")
 const cors = require("cors");
+require("dotenv").config();
 const CustomerRoute = require("./Routes/CustomerRoute");
 const AdminRoute = require("./Routes/AdminRoute");
 
@@ -13,7 +14,7 @@ app.use(bodyParser.json());
 // Parse incoming requests with urlencoded payloads
 app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect("mongodb://127.0.0.1:27017/airflightbooking").then(()=>{
+mongoose.connect(process.env.DB_CONN).then(()=>{
     console.log("DB IS CONNECTED")
 })
 
@@ -24,7 +25,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/airflightbooking").then(()=>{
 app.use("/Admin", AdminRoute);
 app.use("/Customer", CustomerRoute);
 
-
-app.listen(8000, ()=>{
-    console.log("Server is running on 8000 port")
+const port = process.env.PORT || 8000 ;
+app.listen(port, ()=>{
+    console.log(`Server is running on ${port} port`)
 })
